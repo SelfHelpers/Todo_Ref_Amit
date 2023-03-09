@@ -2,6 +2,8 @@ const app = require('express')();
 const mongoose = require('mongoose');
 
 const PORT = 3000;
+
+// Need to use Environment Variable to store the uri, as it should not be exposed
 const uri = 'mongodb+srv://AmitRaj:AmitRaj123@cluster0.yog8h5r.mongodb.net/test';
 
 
