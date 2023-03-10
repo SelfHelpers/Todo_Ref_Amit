@@ -1,4 +1,5 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
 
 const PORT = 3000;
@@ -9,6 +10,8 @@ const uri = 'mongodb+srv://AmitRaj:AmitRaj123@cluster0.yog8h5r.mongodb.net/test'
 
 const taskRoutes = require('./routes/tasks.js');
 
+
+app.use(express.json());
 
 
 app.get('/', (req, res) => {
