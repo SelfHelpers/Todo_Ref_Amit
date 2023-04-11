@@ -28,6 +28,10 @@ app.get('/test', (req, res) => {
 
 app.use('/tasks', taskRoutes);
 
+app.get('/**', (req, res) => {
+    res.json({ message: "404" });
+})
+
 
 mongoose.connect(uri).then(() => {
     console.log("Connected to MongoDB");
